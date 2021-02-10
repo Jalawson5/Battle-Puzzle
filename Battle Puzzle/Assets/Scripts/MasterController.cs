@@ -244,6 +244,11 @@ public class MasterController : MonoBehaviour
         SceneManager.LoadScene("HelpMenu");
     }
     
+    public void GeneralHelpButton()
+    {
+        SceneManager.LoadScene("GeneralHelp");
+    }
+    
     public void CharHelpButton()
     {
         SceneManager.LoadScene("CharacterHelp");

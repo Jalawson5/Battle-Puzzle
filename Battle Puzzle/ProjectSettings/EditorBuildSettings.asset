@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HelpMenu.unity
     guid: 6a09311778a03824bb90dbfb022a2ad1
   - enabled: 1
+    path: Assets/Scenes/GeneralHelp.unity
+    guid: 633418d0a58a25b4c9ba79d94ad268bf
+  - enabled: 1
     path: Assets/Scenes/CharacterHelp.unity
     guid: 49c3b1572fb6907479d1e876f44d6217
   m_configObjects: {}
