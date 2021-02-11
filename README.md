@@ -2,6 +2,13 @@
 Battle Puzzle Unity Game (Name not final)
 
 ---
+#2/10/2021:
+
+Completed the instructions page
+
+Note: Still considered prerelease, but the game is now fully playable.
+
+---
 #2/9/2021:
 
 Added a different sound effect for breaking blocks
