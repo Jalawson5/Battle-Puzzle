@@ -95,7 +95,7 @@ public class GameController : MonoBehaviour
         handlingGarbage = false;
         hasDropped = false;
         
-        timer = 1f;
+        timer = 0.35f;
         
         numFalling = 0;
         garbage = 0;
@@ -152,7 +152,7 @@ public class GameController : MonoBehaviour
             }
 
             if(matching || !canSpawn)
-                timer = 1f;
+                timer = 0.35f;
             
             if(clearCombo)
             {
@@ -316,6 +316,8 @@ public class GameController : MonoBehaviour
                 board[old_x, old_y] = null;
                 Destroy(curr.gameObject);
             }
+            
+            SoundController.instance.PlaySound(SoundController.SoundDestroy);
         }
         
         if(totalCombo > 4)

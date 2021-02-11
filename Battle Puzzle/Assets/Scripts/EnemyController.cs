@@ -86,7 +86,7 @@ public class EnemyController : MonoBehaviour
         hasDropped = false;
         checking = false;
         
-        timer = 1f;
+        timer = 0.75f;
         InitDifficulty();
         
         numFalling = 0;
@@ -205,7 +205,7 @@ public class EnemyController : MonoBehaviour
             }
 
             if(matching || !canSpawn)
-                timer = 1f;
+                timer = 0.75f;
             
             if(clearCombo)
             {
