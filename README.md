@@ -2,6 +2,13 @@
 Battle Puzzle Unity Game (Name not final)
 
 ---
+#2/11/2021:
+
+Changed how sounds are handled, so they do not overlap
+
+Adjusted the delay when getting another block.
+
+---
 #2/10/2021:
 
 Completed the instructions page
