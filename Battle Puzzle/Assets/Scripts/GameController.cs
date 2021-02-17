@@ -419,7 +419,7 @@ public class GameController : MonoBehaviour
         while(fallStack.Count > 0)
         {
             GameObject tempObj = (GameObject)fallStack.Pop();
-            tempStack.Push(tempObj);
+            tempStack.Push(tempObj); //Null reference here when rogue drops blocks while opponent overflows, looking into it//
             
             int new_x = (int) tempObj.transform.position.x + x_correct;
             int new_y = (int) tempObj.transform.position.y + y_correct;
