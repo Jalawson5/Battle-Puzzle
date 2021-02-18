@@ -2,6 +2,15 @@
 Battle Puzzle Unity Game (Name not final)
 
 ---
+#2/18/2021:
+
+Added a Settings menu.
+
+Added a fullscreen/windowed option
+
+Hopefully fixed display issues on some resolutions with the windowed mode. Time will tell.
+
+---
 #2/17/2021:
 
 Added a high score function.
