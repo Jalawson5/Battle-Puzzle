@@ -23,6 +23,8 @@ public class MasterController : MonoBehaviour
     public static int[] Opponents;
     public static bool GameOver;
     
+    public static bool fullscreen;
+    
     public static DataEntry Dat;
     
     public int playerScore;
@@ -354,6 +356,16 @@ public class MasterController : MonoBehaviour
         SceneManager.LoadScene("CharacterHelp");
     }
     
+    ////////////////////////////////////////
+    //void SettingsButton()               //
+    //Handler for the Settings menu button//
+    //opens the settings menu             //
+    ////////////////////////////////////////
+    public void SettingsButton()
+    {
+        SceneManager.LoadScene("SettingsMenu");
+    }
+    
     ////////////////////////////////////
     //void BackToMenuButton()         //
     //Handler for the Back menu button//
@@ -394,6 +406,26 @@ public class MasterController : MonoBehaviour
         {
             highScore = 0;
         }
+        
+        if(PlayerPrefs.HasKey("full"))
+        {
+            int temp = PlayerPrefs.GetInt("full");
+            
+            if(temp == 1)
+            {
+                fullscreen = true;
+                Screen.fullScreen = true;
+            }
+            
+            else
+            {
+                fullscreen = false;
+                Screen.fullScreen = false;
+            }
+        }
+        
+        else
+            fullscreen = Screen.fullScreen;
     }
     
     /////////////////////////////////////
@@ -414,5 +446,33 @@ public class MasterController : MonoBehaviour
         
         //Save data//
         Dat.SaveData();
+        
+        if(fullscreen)
+            PlayerPrefs.SetInt("full", 1);
+        
+        else
+            PlayerPrefs.SetInt("full", 0);
+            
+        PlayerPrefs.Save();
+    }
+    
+    ////////////////////////////////
+    //void ToggleScreen()         //
+    //toggles the fullscreen value//
+    ////////////////////////////////
+    public void ToggleScreen()
+    {
+        fullscreen = !fullscreen;
+        ScreenToggleButton.instance.ToggleText();
+    }
+    
+    /////////////////////////////////////////////
+    //void UpdateSettings()                    //
+    //updates values based on changed settings //
+    //currently includes fullscreen vs windowed//
+    /////////////////////////////////////////////
+    public void UpdateSettings()
+    {
+        Screen.fullScreen = fullscreen;
     }
 }
